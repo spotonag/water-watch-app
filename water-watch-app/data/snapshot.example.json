@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-07-04T00:00:00.000Z",
+  "source": "Ruralco Water",
+  "sourceUrl": "https://www.ruralcowater.com.au/home/",
+  "zone": "VIC Goulburn Zone 1A",
+  "market": "Temporary Allocation",
+  "sellOrders": [],
+  "tradesInProgress": [],
+  "counts": { "sellOrders": 0, "tradesInProgress": 0 }
+}

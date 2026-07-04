@@ -1,0 +1,26 @@
+{
+  "name": "water-watch-ruralco-vic-1a",
+  "version": "1.0.0",
+  "description": "Private dashboard and SMS watcher for Ruralco Water VIC Goulburn Zone 1A temporary allocation sell orders and trades in progress.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node src/run-check-once.js"
+  },
+  "dependencies": {
+    "@twilio-labs/serverless-runtime-types": "^4.0.0",
+    "cheerio": "^1.0.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "node-cron": "^3.0.3",
+    "playwright": "^1.49.1",
+    "twilio": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
