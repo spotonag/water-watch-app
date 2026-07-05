@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#163d2b" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Water Watch</title>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero card">
+      <div>
+        <p class="eyebrow">Ruralco Water Only</p>
+        <h1>Water Watch</h1>
+        <p class="subtitle">VIC Goulburn Zone 1A — Temporary Allocation Market</p>
+      </div>
+      <div class="status-pill" id="connectionStatus">Loading</div>
+    </section>
+
+    <section class="grid two">
+      <div class="card metric">
+        <p>Last checked</p>
+        <strong id="lastChecked">—</strong>
+      </div>
+      <div class="card metric">
+        <p>Next automatic check</p>
+        <strong>Every 30 mins</strong>
+      </div>
+    </section>
+
+    <section class="grid two">
+      <div class="card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">First 3</p>
+            <h2>Sell Orders</h2>
+          </div>
+          <span class="count" id="sellCount">0</span>
+        </div>
+        <div id="sellOrders" class="list"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">First 3</p>
+            <h2>Trades In Progress</h2>
+          </div>
+          <span class="count" id="progressCount">0</span>
+        </div>
+        <div id="progressOrders" class="list"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Alerts</p>
+          <h2>SMS number</h2>
+        </div>
+      </div>
+      <p class="muted">Only sends an SMS when Ruralco data changes. No change = no SMS.</p>
+      <form id="settingsForm" class="settings-form">
+        <label>
+          Dashboard PIN
+          <input id="pin" type="password" placeholder="Enter app PIN" autocomplete="current-password" />
+        </label>
+        <label>
+          Mobile number for SMS
+          <input id="smsToNumber" type="tel" inputmode="tel" placeholder="04XX XXX XXX or +614XX XXX XXX" />
+        </label>
+        <button type="submit">Save SMS Number</button>
+        <button type="button" id="checkNow" class="secondary">Check Now</button>
+      </form>
+      <p id="formMessage" class="form-message"></p>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Change log</p>
+          <h2>Latest updates</h2>
+        </div>
+      </div>
+      <div id="events" class="events"></div>
+    </section>
+  </main>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>
